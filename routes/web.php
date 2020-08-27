@@ -12,5 +12,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return redirect()->route('product');
+});
+
+$router->group(['prefix' => 'mercadopago'], function () use ($router){
+	$router->get('product', ['as' => 'product', 'uses' => 'MercadoPagoController@product']);
+	$router->post('setProduct',['as' => 'setProduct', 'uses' => 'MercadoPagoController@setProduct']);
+	$router->post('procesar-pago',['as' => 'procesar_pago', 'uses' => 'MercadoPagoController@procesar_pago']);
 });
