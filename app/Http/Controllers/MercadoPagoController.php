@@ -57,17 +57,16 @@
 		}
 
 		public function success(Request $request){
-
 			$data = [
-				'collection_id' => $request->input('preference_id'),
-				'collection_status' => $request->input('back_url'),
-				'external_reference' => $request->input('payment_id'),
-				'payment_type' => $request->input('payment_status'),
-				'merchant_order_id' => $request->input('payment_status_detail'),
-				'preference_id' => $request->input('merchant_order_id'),
-				'site_id' => $request->input('processing_mode'),
+				'collection_id' => $request->input('collection_id'),
+				'collection_status' => $request->input('collection_status'),
+				'external_reference' => $request->input('external_reference'),
+				'payment_type' => $request->input('payment_type'),
+				'merchant_order_id' => $request->input('merchant_order_id'),
+				'preference_id' => $request->input('preference_id'),
+				'site_id' => $request->input('site_id'),
 				'processing_mode' => $request->input('processing_mode'),
-				'merchant_account_id' => $request->input('processing_mode')
+				'merchant_account_id' => $request->input('merchant_account_id')
 			];
 
 			$data = (object) $data;
@@ -76,17 +75,16 @@
 		}
 
 		public function failure(Request $request){
-
 			$data = [
-				'collection_id' => $request->input('preference_id'),
-				'collection_status' => $request->input('back_url'),
-				'external_reference' => $request->input('payment_id'),
-				'payment_type' => $request->input('payment_status'),
-				'merchant_order_id' => $request->input('payment_status_detail'),
-				'preference_id' => $request->input('merchant_order_id'),
-				'site_id' => $request->input('processing_mode'),
+				'collection_id' => $request->input('collection_id'),
+				'collection_status' => $request->input('collection_status'),
+				'external_reference' => $request->input('external_reference'),
+				'payment_type' => $request->input('payment_type'),
+				'merchant_order_id' => $request->input('merchant_order_id'),
+				'preference_id' => $request->input('preference_id'),
+				'site_id' => $request->input('site_id'),
 				'processing_mode' => $request->input('processing_mode'),
-				'merchant_account_id' => $request->input('processing_mode')
+				'merchant_account_id' => $request->input('merchant_account_id')
 			];
 
 			$data = (object) $data;
@@ -95,17 +93,16 @@
 		}
 
 		public function pending(Request $request){
-			
 			$data = [
-				'collection_id' => $request->input('preference_id'),
-				'collection_status' => $request->input('back_url'),
-				'external_reference' => $request->input('payment_id'),
-				'payment_type' => $request->input('payment_status'),
-				'merchant_order_id' => $request->input('payment_status_detail'),
-				'preference_id' => $request->input('merchant_order_id'),
-				'site_id' => $request->input('processing_mode'),
+				'collection_id' => $request->input('collection_id'),
+				'collection_status' => $request->input('collection_status'),
+				'external_reference' => $request->input('external_reference'),
+				'payment_type' => $request->input('payment_type'),
+				'merchant_order_id' => $request->input('merchant_order_id'),
+				'preference_id' => $request->input('preference_id'),
+				'site_id' => $request->input('site_id'),
 				'processing_mode' => $request->input('processing_mode'),
-				'merchant_account_id' => $request->input('processing_mode')
+				'merchant_account_id' => $request->input('merchant_account_id')
 			];
 
 			$data = (object) $data;
