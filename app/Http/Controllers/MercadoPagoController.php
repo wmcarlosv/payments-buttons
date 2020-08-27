@@ -47,18 +47,30 @@
 		}
 
 		public function procesar_pago(Request $request){
+			$data = [
+				'preference_id' => $request->input('preference_id'),
+				'back_url' => $request->input('back_url'),
+				'payment_id' => $request->input('payment_id'),
+				'payment_status' => $request->input('payment_status'),
+				'payment_status_detail' => $request->input('payment_status_detail'),
+				'merchant_order_id' => $request->input('merchant_order_id'),
+				'processing_mode' => $request->input('processing_mode')
+			];
+
+			$data = (object) $data;
+
+			return redirect()->to($data->back_url);
+		}
+
+		public function success(Request $request){
 			dd($request);
 		}
 
-		public function success(){
-			dd('success');
+		public function failure(Request $request){
+			dd($request);
 		}
 
-		public function failure(){
-			dd('failure');
-		}
-
-		public function pending(){
-			dd('pendings');
+		public function pending(Request $request){
+			dd($request);
 		}
 	}
