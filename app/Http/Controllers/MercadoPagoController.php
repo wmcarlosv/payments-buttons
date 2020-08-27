@@ -28,6 +28,12 @@
 				'total' => ($price * $qty)
 			];
 
+			$preference->back_urls = array(
+				'success' => route('success'),
+				'failure' => route('failure'),
+				'pending' => route('pending')
+			);
+
 			$data = (object) $data;
 
 			$item = new MercadoPago\Item();
@@ -42,5 +48,17 @@
 
 		public function procesar_pago(Request $request){
 			dd($request);
+		}
+
+		public function success(){
+			dd('success');
+		}
+
+		public function failure(){
+			dd('failure');
+		}
+
+		public function pending(){
+			dd('pendings');
 		}
 	}
