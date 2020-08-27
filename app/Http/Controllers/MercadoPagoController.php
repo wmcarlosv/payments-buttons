@@ -48,13 +48,7 @@
 
 		public function procesar_pago(Request $request){
 			$data = [
-				'preference_id' => $request->input('preference_id'),
-				'back_url' => $request->input('back_url'),
-				'payment_id' => $request->input('payment_id'),
-				'payment_status' => $request->input('payment_status'),
-				'payment_status_detail' => $request->input('payment_status_detail'),
-				'merchant_order_id' => $request->input('merchant_order_id'),
-				'processing_mode' => $request->input('processing_mode')
+				'back_url' => $request->input('back_url')
 			];
 
 			$data = (object) $data;
@@ -63,14 +57,59 @@
 		}
 
 		public function success(Request $request){
-			dd($request);
+
+			$data = [
+				'collection_id' => $request->input('preference_id'),
+				'collection_status' => $request->input('back_url'),
+				'external_reference' => $request->input('payment_id'),
+				'payment_type' => $request->input('payment_status'),
+				'merchant_order_id' => $request->input('payment_status_detail'),
+				'preference_id' => $request->input('merchant_order_id'),
+				'site_id' => $request->input('processing_mode'),
+				'processing_mode' => $request->input('processing_mode'),
+				'merchant_account_id' => $request->input('processing_mode')
+			];
+
+			$data = (object) $data;
+
+			dd($data);
 		}
 
 		public function failure(Request $request){
-			dd($request);
+
+			$data = [
+				'collection_id' => $request->input('preference_id'),
+				'collection_status' => $request->input('back_url'),
+				'external_reference' => $request->input('payment_id'),
+				'payment_type' => $request->input('payment_status'),
+				'merchant_order_id' => $request->input('payment_status_detail'),
+				'preference_id' => $request->input('merchant_order_id'),
+				'site_id' => $request->input('processing_mode'),
+				'processing_mode' => $request->input('processing_mode'),
+				'merchant_account_id' => $request->input('processing_mode')
+			];
+
+			$data = (object) $data;
+
+			dd($data);
 		}
 
 		public function pending(Request $request){
-			dd($request);
+			
+			$data = [
+				'collection_id' => $request->input('preference_id'),
+				'collection_status' => $request->input('back_url'),
+				'external_reference' => $request->input('payment_id'),
+				'payment_type' => $request->input('payment_status'),
+				'merchant_order_id' => $request->input('payment_status_detail'),
+				'preference_id' => $request->input('merchant_order_id'),
+				'site_id' => $request->input('processing_mode'),
+				'processing_mode' => $request->input('processing_mode'),
+				'merchant_account_id' => $request->input('processing_mode')
+			];
+
+			$data = (object) $data;
+
+			dd($data);
 		}
 	}
